@@ -14,6 +14,8 @@ import com.mongodb.MongoClient;
  */
 public class Persistencia {
 	private Datastore ds; //NoSQL Datastore
+	private Datastore dsu; 
+	private static String nombreDB;	
 	
 	/**
 	 * Constructor de la clase persistencia
@@ -22,13 +24,38 @@ public class Persistencia {
 	}//Fin del constructor
 	
 	/**
-	 * Este método establece la conexión con la base de datos Ganaderia y crea el objeto ds que permitirá la interaccion entre Java y MongoDB
+	 * @return the nombreDB
+	 */
+	public static String getNombreDB() {
+		return nombreDB;
+	}
+
+	/**
+	 * @param nombreDB the nombreDB to set
+	 */
+	public static void setNombreDB(String nombreDB) {
+		Persistencia.nombreDB = nombreDB;
+	}
+
+	/**
+	 * Este método establece la conexión con la base de datos especifica del usuario y crea el objeto ds que permitirá la interaccion entre Java y MongoDB
 	 */
 	public void Conexion() {
 		MongoClient mongo = new MongoClient();
 	    Morphia morphia = new Morphia();
 	    morphia.map(Ganado.class).map(Usuario.class); // clases a guardar
-	    ds = morphia.createDatastore(mongo, "Ganaderia"); // Se establece la conexión con la base de datos
+	    ds = morphia.createDatastore(mongo, nombreDB); // Se establece la conexión con la base de datos
+	}//Fin del método
+	
+	/**
+	 * Este método establece la conexión con la base de datos Usuarios donde se persiste la información 
+	 * de los usuarios registrados
+	 */
+	public void ConexionUsuarios() {
+		MongoClient mongo = new MongoClient();
+	    Morphia morphia = new Morphia();
+	    morphia.map(Ganado.class).map(Usuario.class); // clases a guardar
+	    dsu = morphia.createDatastore(mongo, "Usuarios"); // Se establece la conexión con la base de datos
 	}//Fin del método
 	
 	/**
@@ -44,7 +71,7 @@ public class Persistencia {
 	 * @param usuario Usuario que se desea Guardar
 	 */
 	public void GuardarUsuario(Usuario usuario) {
-		ds.save(usuario);
+		dsu.save(usuario);
 	}//Fin del método
 	
 	/**
@@ -67,7 +94,7 @@ public class Persistencia {
 	 */
 	public ArrayList<Usuario> ObtenerUsuario(){
 		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
-		Query<Usuario> query = ds.createQuery(Usuario.class); 
+		Query<Usuario> query = dsu.createQuery(Usuario.class); 
 		List<Usuario> Miusuario = query.asList();
 		for (Usuario u: Miusuario){
             usuarios.add(u);

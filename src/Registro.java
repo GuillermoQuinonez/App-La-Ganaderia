@@ -63,7 +63,7 @@ public class Registro extends JFrame {
 	 */
 	public Registro() throws ParseException {
 		controlador = new ControlGanaderia();
-		controlador.Conectar();
+		controlador.ConectarUsuarios();
 		setResizable(true);
 		setTitle("LA GANADERIA");
 		setIconImage(new ImageIcon(getClass().getResource("/imagenes/icono.jpg")).getImage());

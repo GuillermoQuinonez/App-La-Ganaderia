@@ -84,6 +84,7 @@ public class PerfilUsuario extends JFrame {
 	 */
 	public PerfilUsuario() throws ParseException {
 		controlador = new ControlGanaderia();
+		controlador.ConectarUsuarios();
 		controlador.Conectar();
 		setResizable(true);
 		setTitle("INFORMACIÓN DEL GANADERO");
@@ -233,6 +234,7 @@ public class PerfilUsuario extends JFrame {
 					else{
 						controlador.ActualizarUsuario(usuario, tfNombre.getText(), tfUsuario.getText(), tfPassword.getText(), Long.parseLong(tfMovil.getText()), tfDireccion.getText(), tfNombreGanaderia.getText(), tfDireccionGanaderia.getText(), Long.parseLong(tfTelefono.getText()));
 						JOptionPane.showMessageDialog(null, "El registro se ha actualizado", "Hecho", 1);
+						controlador.regresar(PerfilUsuario.this);
 						setVisible(false);	
 					}
 				}

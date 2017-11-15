@@ -59,7 +59,7 @@ public class Login extends JFrame {
 	 */
 	public Login() {
 		controlador = new ControlGanaderia(); 
-		controlador.Conectar();
+		controlador.ConectarUsuarios();
 		setResizable(false);
 		setTitle("LA GANADERIA");
 		setIconImage(new ImageIcon(getClass().getResource("/imagenes/icono.jpg")).getImage());
@@ -131,6 +131,7 @@ public class Login extends JFrame {
 				}
 				else {
 					if(controlador.AutenticarIngreso(tfUsuario.getText(),contrasena) == true) {
+						Persistencia.setNombreDB(tfUsuario.getText());
 						controlador.regresar(Login.this);
 					}
 					else {

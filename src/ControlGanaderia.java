@@ -72,10 +72,17 @@ public class ControlGanaderia {
 	}//Cierre del método
 
 	/**
-	 * Este método establece la conexión con el modelo de persistencia de datos 
+	 * Este método establece la conexión con el modelo de persistencia de datos de los bovinos
 	 */
 	public void Conectar() {
 		persistencia.Conexion();
+	}//Cierre del método
+	
+	/**
+	 * Este método establece la conexión con el modelo de persistencia de los usuardios
+	 */
+	public void ConectarUsuarios() {
+		persistencia.ConexionUsuarios();
 	}//Cierre del método
 	
 	/**
