@@ -136,7 +136,6 @@ public class Principal extends JFrame {
 		btnCerrarSesion.addActionListener(new ListenerPrincipal());
 		btnCerrarSesion.setBackground(new Color(255, 255, 255));
 		btnCerrarSesion.setFont(new Font("Dialog", Font.BOLD, 17));
-		btnCerrarSesion.addActionListener(new ListenerPrincipal());
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.WHITE);

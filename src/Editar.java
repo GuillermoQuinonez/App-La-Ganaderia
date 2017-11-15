@@ -24,8 +24,6 @@ import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 import com.toedter.calendar.JDateChooser;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
@@ -55,7 +53,6 @@ public class Editar extends JFrame {
 	private JTextArea txtHistorial;
 	private JButton btnGuardar;
 	private JButton btnRegresar;
-	//private String Codigo; 
 	private ControlGanaderia controlador;
 	private JComboBox<String> cbSexo;
 	private JDateChooser dcFecha;
@@ -93,7 +90,6 @@ public class Editar extends JFrame {
 		controlador=new ControlGanaderia();
 		controlador.Conectar();
 		FechaActual = new Date(); 
-		//Codigo = codigo; 
 		setTitle("La Ganader\u00EDa: Edición");
 		setIconImage(new ImageIcon(getClass().getResource("/imagenes/icono.jpg")).getImage());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -233,7 +229,7 @@ public class Editar extends JFrame {
 		cbEstado.addItem("Producción Lechera");
 		cbEstado.addItem("Preparto");
 		cbEstado.addItem("Enfermería");
-		cbEstado.addItemListener(new ItemListenerEditar());
+		cbEstado.addActionListener(new ListenerEditar());
 		panel_1.add(cbEstado);
 		
 		JLabel lblProduccionLecheral = new JLabel("Produccion lechera (L): ");
@@ -404,46 +400,30 @@ public class Editar extends JFrame {
 				 * */
 				controlador.regresar(Editar.this);
 			}
+			
+			if(arg0.getSource() == cbEstado) {
+				JFormattedTextField ProduccionLechera = ((JSpinner.DefaultEditor) tfPLechera.getEditor()).getTextField();
+				if(cbEstado.getSelectedIndex() == 1) {
+					txtHistorial.append("\n"+ new SimpleDateFormat("dd/MM/yyyy").format(FechaActual)+ ": El animal entró en Engorde");
+					tfPLechera.setValue(0);
+					ProduccionLechera.setEditable(false);
+					tfGPeso.setValue(0);	
+				}
+				if(cbEstado.getSelectedIndex() == 2) {
+					txtHistorial.append("\n"+ new SimpleDateFormat("dd/MM/yyyy").format(FechaActual)+ ": El animal entró en Producción Lechera");
+					tfPLechera.setValue(0);
+					ProduccionLechera.setEditable(true);
+					tfGPeso.setValue(0);
+				}
+				if(cbEstado.getSelectedIndex() == 0 || cbEstado.getSelectedIndex() == 3 || cbEstado.getSelectedIndex() == 4){
+					txtHistorial.append("\n"+ new SimpleDateFormat("dd/MM/yyyy").format(FechaActual)+ ": El animal ha dejado Producción Lechera o Engorde y ha entrado a " + cbEstado.getSelectedItem().toString());
+					ProduccionLechera.setEditable(false);
+					tfPLechera.setValue(0);
+					tfGPeso.setValue(0);	
+				}
+			}
 		}
 		
 	}
-	
-	
-	/**
-	 * Esta clase interna permite escuhar la selección del ComboBox 
-	 * @file Nuevo.java
-	 * @author José Guillermo Quiñónez Castillo <qui17775@uvg.edu.gt>
-	 * @author Carlo Humberto Chew <che17507@uvg.edu.gt>
-	 * @version 28.09.2017/A
-	 */
-	public class ItemListenerEditar implements ItemListener{
-		@Override
-		/*
-		 * Detecta la selección del ComboBox
-		 * */
-		public void itemStateChanged(ItemEvent e) {
-			JFormattedTextField ProduccionLechera = ((JSpinner.DefaultEditor) tfPLechera.getEditor()).getTextField();
-			if(cbEstado.getSelectedIndex() == 1) {
-				txtHistorial.append("\n"+ new SimpleDateFormat("dd/MM/yyyy").format(FechaActual)+ ": El animal entró en Engorde");
-				tfPLechera.setValue(0);
-				ProduccionLechera.setEditable(false);
-				tfGPeso.setValue(0);	
-			}
-			if(cbEstado.getSelectedIndex() == 2) {
-				txtHistorial.append("\n"+ new SimpleDateFormat("dd/MM/yyyy").format(FechaActual)+ ": El animal entró en Producción Lechera");
-				tfPLechera.setValue(0);
-				ProduccionLechera.setEditable(true);
-				tfGPeso.setValue(0);
-			}
-			if(cbEstado.getSelectedIndex() == 0 || cbEstado.getSelectedIndex() == 3 || cbEstado.getSelectedIndex() == 4){
-				txtHistorial.append("\n"+ new SimpleDateFormat("dd/MM/yyyy").format(FechaActual)+ ": El animal ha dejado Producción Lechera o Engorde y ha entrado a " + cbEstado.getSelectedItem().toString());
-				ProduccionLechera.setEditable(false);
-				tfPLechera.setValue(0);
-				tfGPeso.setValue(0);	
-			}
-		
-		}
-		
-	}//Cierre de la clase interna MyItemListener
 	
 }//Cierre de la clase Editar
