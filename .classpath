@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/Margarita Quiñonez/Desktop/Proyecto Final Programación/App La Ganaderia/Librerias/jcalendar-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Margarita Quiñonez/Desktop/Proyecto Final Programación/App La Ganaderia/Librerias/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Margarita Quiñonez/Desktop/Proyecto Final Programación/App La Ganaderia/Librerias/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Margarita Quiñonez/Desktop/Proyecto Final Programación/App La Ganaderia/Librerias/jgoodies-common-1.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Margarita Quiñonez/Desktop/Proyecto Final Programación/App La Ganaderia/Librerias/jgoodies-looks-2.4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Margarita Quiñonez/Desktop/Proyecto Final Programación/App La Ganaderia/Librerias/junit-4.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Margarita Quiñonez/Desktop/Proyecto Final Programación/App La Ganaderia/Librerias/mongo-java-driver-3.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Margarita Quiñonez/Desktop/Proyecto Final Programación/App La Ganaderia/Librerias/morphia-1.3.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
