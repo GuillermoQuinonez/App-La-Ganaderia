@@ -201,7 +201,6 @@ public class Principal extends JFrame {
 		panel_2.setBounds(474, 7, 708, 733);
 		contentPane.add(panel_2);
 		panel_2.setLayout(new GridLayout(1, 1, 5, 5));
-
 		/*
 		 * Muestra datos de la base de datos en la tabla
 		 * */
@@ -285,9 +284,11 @@ public class Principal extends JFrame {
 				} 
 				else {
 					controlador.EliminarGanado(table.getModel().getValueAt(table.getSelectedRow(),0).toString());
+					
 					controlador.regresar(Principal.this);
-				}
+					
 				
+				}
 			}
 			if(arg0.getSource() == btnCrear) {
 				Nuevo nuevo = new Nuevo(); 

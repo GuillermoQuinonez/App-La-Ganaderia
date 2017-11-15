@@ -185,7 +185,6 @@ public class ControlGanaderia {
 			Collections.sort(ganado, new OrdenarPorGPeso());
 		}
 		else if(indice == 5) {
-			System.out.println(numero);
 			ArrayList<Ganado> temp = new ArrayList<Ganado>();
 			for(Ganado g: ganado) {
 				if(g.getNumero() == numero) {
@@ -203,11 +202,11 @@ public class ControlGanaderia {
 		Registros(); 
 		for(Ganado g: ganado) {
 			System.out.println("Hola");
-			if(g.getId().equals(id)) {
-				System.out.println("Entró");
+			if(g.getId().toString().equals(id)) {
 				persistencia.EliminarRegistroGanado(g);
 			}
 		}
+		
 	}
 
 	/**
