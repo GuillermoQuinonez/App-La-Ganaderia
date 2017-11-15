@@ -3,7 +3,7 @@ import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 /**
  * Esta es la clase modelo que contiene las características que definen al bobino. Implementa la interfaz Comparable para ordenar el arreglo de objetos Ganado de forma
- * alfabética por su nombre
+ * alfabética por su nombre. 
  * @file Ganado.java
  * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
  * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
