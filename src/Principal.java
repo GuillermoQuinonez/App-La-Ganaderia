@@ -23,6 +23,7 @@ import javax.swing.JComboBox;
 import java.awt.Font;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
+import java.awt.SystemColor;
 /**
  * Esta clase contiene un menú con botones para efectuar las diferentes acciones que el programa realiza y además contiene una tabla con la información de cada ganado creado
  * @file Principal.java
@@ -83,7 +84,7 @@ public class Principal extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1200, 800);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(160, 82, 45));
+		contentPane.setBackground(new Color(205, 133, 63));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -102,39 +103,39 @@ public class Principal extends JFrame {
 		panel_3.setLayout(new GridLayout(3, 2, 10, 10));
 		
 		btnVer = new JButton("VER");
-		btnVer.setBackground(new Color(255, 255, 255));
+		btnVer.setBackground(SystemColor.control);
 		btnVer.addActionListener(new ListenerPrincipal()); //Se implementa el Listener en el botón
 		
 		btnCrear = new JButton("CREAR");
 		btnCrear.addActionListener(new ListenerPrincipal()); //Se implementa el Listener en el botón
 		btnCrear.setFont(new Font("Dialog", Font.BOLD, 18));
-		btnCrear.setBackground(new Color(255, 255, 255));
+		btnCrear.setBackground(SystemColor.control);
 		panel_3.add(btnCrear);
 		btnVer.setFont(new Font("Dialog", Font.BOLD, 18));
 		panel_3.add(btnVer);
 		
 		btnEditar = new JButton("EDITAR");
-		btnEditar.setBackground(new Color(255, 255, 255));
+		btnEditar.setBackground(SystemColor.control);
 		btnEditar.addActionListener(new ListenerPrincipal()); //Se implementa el Listener en el botón
 		btnEditar.setFont(new Font("Dialog", Font.BOLD, 18));
 		panel_3.add(btnEditar);
 		
 		btnEliminar = new JButton("ELIMINAR");
-		btnEliminar.setBackground(new Color(255, 255, 255));
+		btnEliminar.setBackground(SystemColor.control);
 		btnEliminar.setFont(new Font("Dialog", Font.BOLD, 18));
 		btnEliminar.addActionListener(new ListenerPrincipal()); //Se implementa el Listener en el botón
 		panel_3.add(btnEliminar);
 		
 		btnDatos = new JButton("INFORMACI\u00D3N");
 		btnDatos.addActionListener(new ListenerPrincipal());
-		btnDatos.setBackground(Color.WHITE);
+		btnDatos.setBackground(SystemColor.control);
 		btnDatos.setFont(new Font("Dialog", Font.BOLD, 17));
 		panel_3.add(btnDatos);
 		
 		btnCerrarSesion = new JButton("CERRAR SESI\u00D3N");
 		panel_3.add(btnCerrarSesion);
 		btnCerrarSesion.addActionListener(new ListenerPrincipal());
-		btnCerrarSesion.setBackground(new Color(255, 255, 255));
+		btnCerrarSesion.setBackground(SystemColor.control);
 		btnCerrarSesion.setFont(new Font("Dialog", Font.BOLD, 17));
 		
 		JPanel panel_1 = new JPanel();
@@ -152,7 +153,7 @@ public class Principal extends JFrame {
 		
 		btnIrBusqueda = new JButton("IR");
 		btnIrBusqueda.addActionListener(new ListenerPrincipal());
-		btnIrBusqueda.setBackground(new Color(255, 255, 255));
+		btnIrBusqueda.setBackground(SystemColor.control);
 		btnIrBusqueda.setFont(new Font("Dialog", Font.BOLD, 14));
 		btnIrBusqueda.setBounds(154, 99, 129, 39);
 		panel_1.add(btnIrBusqueda);
@@ -164,7 +165,7 @@ public class Principal extends JFrame {
 		panel_1.add(lblOrdenarPor);
 		
 		cbOrdenar = new JComboBox<>();
-		cbOrdenar.setBackground(new Color(255, 255, 255));
+		cbOrdenar.setBackground(SystemColor.control);
 		cbOrdenar.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		cbOrdenar.setBounds(241, 162, 197, 47);
 		cbOrdenar.addItem("Número");
@@ -176,7 +177,7 @@ public class Principal extends JFrame {
 		panel_1.add(cbOrdenar);
 		
 		btnOrdenar = new JButton("ORDENAR");
-		btnOrdenar.setBackground(new Color(255, 255, 255));
+		btnOrdenar.setBackground(SystemColor.control);
 		btnOrdenar.setFont(new Font("Dialog", Font.BOLD, 14));
 		btnOrdenar.addActionListener(new ListenerPrincipal());
 		btnOrdenar.setBounds(154, 237, 129, 39);
@@ -184,7 +185,7 @@ public class Principal extends JFrame {
 		
 		btnMostrarGrafica = new JButton("ESTAD\u00CDSTICAS DE POBLACI\u00D3N");
 		btnMostrarGrafica.addActionListener(new ListenerPrincipal());
-		btnMostrarGrafica.setBackground(new Color(255, 255, 255));
+		btnMostrarGrafica.setBackground(SystemColor.control);
 		btnMostrarGrafica.setFont(new Font("Dialog", Font.BOLD, 12));
 		btnMostrarGrafica.setBounds(113, 300, 218, 47);
 		panel_1.add(btnMostrarGrafica);

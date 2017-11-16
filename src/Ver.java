@@ -19,6 +19,8 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.border.CompoundBorder;
+import java.awt.SystemColor;
 /**
  * Esta clase contiene un frame con campos de texto que muestran información proveniente de la base de datos de cada ganado, sin poder editarlos. 
  * @file Ver.java
@@ -79,32 +81,34 @@ public class Ver extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
-		contentPane.setBackground(UIManager.getColor("ScrollBar.foreground"));
+		contentPane.setBackground(new Color(205, 133, 63));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		btnRegresar = new JButton("regresar");
-		btnRegresar.setFont(new Font("Georgia", Font.PLAIN, 16));
+		btnRegresar = new JButton("REGRESAR");
+		btnRegresar.setBackground(SystemColor.control);
+		btnRegresar.setFont(new Font("Dialog", Font.BOLD, 16));
 		btnRegresar.setBounds(517, 449, 162, 63);
 		btnRegresar.addActionListener(new MyListenerVer()); //Se implementa el Listener al botón
 		
 		JLabel lblnombre = new JLabel("Nombre");
 		lblnombre.setBackground(UIManager.getColor("ScrollBar.background"));
-		lblnombre.setFont(new Font("Georgia", Font.PLAIN, 16));
+		lblnombre.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		lblnombre.setHorizontalAlignment(SwingConstants.CENTER);
-		lblnombre.setBounds(302, 13, 188, 69);
+		lblnombre.setBounds(216, 13, 331, 69);
 		contentPane.add(lblnombre);
 		contentPane.add(btnRegresar);
 		
 		JPanel panel = new JPanel();
-		panel.setBorder(new TitledBorder(null, "Datos Generales", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panel.setBackground(Color.WHITE);
+		panel.setBorder(new TitledBorder(new CompoundBorder(null, UIManager.getBorder("CheckBoxMenuItem.border")), "Datos Generales", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panel.setBounds(12, 81, 370, 315);
 		contentPane.add(panel);
 		panel.setLayout(new GridLayout(6, 2, 10, 10));
 		
 		JLabel lblNmero = new JLabel("N\u00FAmero: ");
-		lblNmero.setFont(new Font("Georgia", Font.PLAIN, 12));
+		lblNmero.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblNmero.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNmero);
 		
@@ -117,7 +121,7 @@ public class Ver extends JFrame {
 		tfNumero.setColumns(10);
 		
 		JLabel lblPropietario = new JLabel("Propietario: ");
-		lblPropietario.setFont(new Font("Georgia", Font.PLAIN, 12));
+		lblPropietario.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblPropietario.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblPropietario);
 		
@@ -130,7 +134,7 @@ public class Ver extends JFrame {
 		tfPropietario.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("Fecha de nac. DD/MM/AA: ");
-		lblNewLabel_1.setFont(new Font("Georgia", Font.PLAIN, 12));
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNewLabel_1);
 		
@@ -143,7 +147,7 @@ public class Ver extends JFrame {
 		tfNac.setColumns(10);
 		
 		JLabel lblSexo = new JLabel("Sexo:");
-		lblSexo.setFont(new Font("Georgia", Font.PLAIN, 12));
+		lblSexo.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblSexo.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblSexo);
 		
@@ -156,7 +160,7 @@ public class Ver extends JFrame {
 		tfSexo.setColumns(10);
 		
 		JLabel lblColor = new JLabel("Color: ");
-		lblColor.setFont(new Font("Georgia", Font.PLAIN, 12));
+		lblColor.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblColor.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblColor);
 		
@@ -169,7 +173,7 @@ public class Ver extends JFrame {
 		tfColor.setColumns(10);
 		
 		JLabel lblPeso = new JLabel("Peso (lb): ");
-		lblPeso.setFont(new Font("Georgia", Font.PLAIN, 12));
+		lblPeso.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblPeso.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblPeso);
 		
@@ -182,13 +186,14 @@ public class Ver extends JFrame {
 		tfPeso.setColumns(10);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Informaci\u00F3n de producci\u00F3n", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel_1.setBackground(Color.WHITE);
+		panel_1.setBorder(new TitledBorder(new CompoundBorder(null, UIManager.getBorder("CheckBoxMenuItem.border")), "Informaci\u00F3n de producci\u00F3n", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panel_1.setBounds(400, 79, 370, 315);
 		contentPane.add(panel_1);
 		panel_1.setLayout(new GridLayout(6, 2, 10, 10));
 		
 		JLabel lblProcedencia = new JLabel("Procedencia: ");
-		lblProcedencia.setFont(new Font("Georgia", Font.PLAIN, 12));
+		lblProcedencia.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblProcedencia.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblProcedencia);
 		
@@ -201,7 +206,7 @@ public class Ver extends JFrame {
 		tfProcedencia.setColumns(10);
 		
 		JLabel lblProgenitor = new JLabel("Progenitor No./Nombre: ");
-		lblProgenitor.setFont(new Font("Georgia", Font.PLAIN, 12));
+		lblProgenitor.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblProgenitor.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblProgenitor);
 		
@@ -214,7 +219,7 @@ public class Ver extends JFrame {
 		tfProgenitor.setColumns(10);
 		
 		JLabel lblProgenitoraNonombre = new JLabel("Progenitora No./Nombre: ");
-		lblProgenitoraNonombre.setFont(new Font("Georgia", Font.PLAIN, 12));
+		lblProgenitoraNonombre.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblProgenitoraNonombre.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblProgenitoraNonombre);
 		
@@ -227,7 +232,7 @@ public class Ver extends JFrame {
 		tfProgenitora.setColumns(10);
 		
 		JLabel lblEstado = new JLabel("Estado: ");
-		lblEstado.setFont(new Font("Georgia", Font.PLAIN, 12));
+		lblEstado.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblEstado.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblEstado);
 		
@@ -240,7 +245,7 @@ public class Ver extends JFrame {
 		tfEstado.setColumns(10);
 		
 		JLabel lblProduccionLecheral = new JLabel("Produccion lechera (L): ");
-		lblProduccionLecheral.setFont(new Font("Georgia", Font.PLAIN, 12));
+		lblProduccionLecheral.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblProduccionLecheral.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblProduccionLecheral);
 		
@@ -253,7 +258,7 @@ public class Ver extends JFrame {
 		tfPLechera.setColumns(10);
 		
 		JLabel lblGananciaDePeso = new JLabel("Ganancia de peso (lb): ");
-		lblGananciaDePeso.setFont(new Font("Georgia", Font.PLAIN, 12));
+		lblGananciaDePeso.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblGananciaDePeso.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblGananciaDePeso);
 		
@@ -266,7 +271,8 @@ public class Ver extends JFrame {
 		tfGPeso.setColumns(10);
 		
 		JPanel panel_3 = new JPanel();
-		panel_3.setBorder(new TitledBorder(null, "Historial", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panel_3.setBackground(Color.WHITE);
+		panel_3.setBorder(new TitledBorder(new CompoundBorder(null, UIManager.getBorder("CheckBoxMenuItem.border")), "Historial", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panel_3.setBounds(12, 407, 389, 133);
 		contentPane.add(panel_3);
 		panel_3.setLayout(new GridLayout(1, 1, 0, 0));

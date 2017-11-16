@@ -25,6 +25,7 @@ import java.awt.event.ItemEvent;
 import com.toedter.calendar.JDateChooser;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
+import java.awt.SystemColor;
 /**
  * Nuevo es un ventana de la GUI que permite llenar los datos requeridos para crear un registro de la clase Ganado
  * @file Nuevo.java
@@ -85,7 +86,7 @@ public class Nuevo extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(139, 69, 19));
+		contentPane.setBackground(new Color(205, 133, 63));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -131,6 +132,7 @@ public class Nuevo extends JFrame {
 		panel.add(lblNewLabel_1);
 		
 		dcFecha = new JDateChooser();
+		dcFecha.getCalendarButton().setBackground(SystemColor.control);
 		panel.add(dcFecha);
 		
 		JLabel lblSexo = new JLabel("Sexo:");
@@ -139,7 +141,7 @@ public class Nuevo extends JFrame {
 		panel.add(lblSexo);
 		
 		cbSexo = new JComboBox<>();
-		cbSexo.setBackground(new Color(255, 255, 255));
+		cbSexo.setBackground(SystemColor.control);
 		cbSexo.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		cbSexo.addItem("Macho");
 		cbSexo.addItem("Hembra");
@@ -215,7 +217,7 @@ public class Nuevo extends JFrame {
 		panel_1.add(lblEstado);
 		
 		cbEstado = new JComboBox<>();
-		cbEstado.setBackground(new Color(255, 255, 255));
+		cbEstado.setBackground(SystemColor.control);
 		cbEstado.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		//Se llenan los Items del ComboBox de forma predeterminada
 		cbEstado.addItem("Otro");
@@ -262,17 +264,17 @@ public class Nuevo extends JFrame {
 		panel_3.add(scroll);
 		
 		btnCrear = new JButton("CREAR");
-		btnCrear.setBackground(new Color(255, 255, 255));
+		btnCrear.setBackground(SystemColor.control);
 		btnCrear.setForeground(new Color(0, 0, 0));
-		btnCrear.setFont(new Font("Dialog", Font.BOLD, 14));
+		btnCrear.setFont(new Font("Dialog", Font.BOLD, 16));
 		btnCrear.addActionListener(new ListenerNuevo()); //Se implementa el Listener al botón para Crear
 		btnCrear.setBounds(431, 444, 138, 59);
 		contentPane.add(btnCrear);
 		
 		btnRegresar = new JButton("REGRESAR");
-		btnRegresar.setBackground(new Color(255, 255, 255));
+		btnRegresar.setBackground(SystemColor.control);
 		btnRegresar.setForeground(new Color(0, 0, 0));
-		btnRegresar.setFont(new Font("Dialog", Font.BOLD, 14));
+		btnRegresar.setFont(new Font("Dialog", Font.BOLD, 16));
 		btnRegresar.setBounds(608, 444, 138, 59);
 		btnRegresar.addActionListener(new ListenerNuevo()); //Se implementa el Listener al botón para regresar al menú 
 		contentPane.add(btnRegresar);

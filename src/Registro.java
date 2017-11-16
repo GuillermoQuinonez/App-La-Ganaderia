@@ -15,6 +15,9 @@ import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
 import javax.swing.SwingConstants;
 import javax.swing.JPasswordField;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.SystemColor;
 /**
  * Registro es una ventana de la GUI que permite ingresar la información requerida para un usuario y guardarla en los registros para crear un nuevo usuario
  * @file Registros.java
@@ -70,91 +73,114 @@ public class Registro extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 508, 587);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(205, 133, 63));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout(10, 2, 5, 5));
 		
 		JLabel lblNombreCompleto = new JLabel("Nombre Completo");
+		lblNombreCompleto.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblNombreCompleto.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNombreCompleto);
 		
 		tfNombre = new JTextField();
+		tfNombre.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfNombre.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(tfNombre);
 		tfNombre.setColumns(10);
 		
 		JLabel lblUsuario = new JLabel("Usuario");
+		lblUsuario.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblUsuario.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblUsuario);
 		
 		tfUsuario = new JTextField();
+		tfUsuario.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfUsuario.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(tfUsuario);
 		tfUsuario.setColumns(10);
 		
 		JLabel lblContrasea = new JLabel("Contrase\u00F1a");
+		lblContrasea.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblContrasea.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblContrasea);
 		
 		tfPassword = new JPasswordField();
+		tfPassword.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfPassword.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(tfPassword);
 		
 		JLabel lblVerificarContrasea = new JLabel("Verificar Contrase\u00F1a");
+		lblVerificarContrasea.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblVerificarContrasea.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblVerificarContrasea);
 		
 		tfPassword2 = new JPasswordField();
+		tfPassword2.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfPassword2.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(tfPassword2);
 		
 		JLabel lblNewLabel = new JLabel("M\u00F3vil");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel);
 		
 		MaskFormatter mascara = new MaskFormatter("########");
 		tfMovil = new JFormattedTextField(mascara);
+		tfMovil.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfMovil.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(tfMovil);
 		
 		JLabel lblDireccin = new JLabel("Direcci\u00F3n");
+		lblDireccin.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblDireccin.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblDireccin);
 		
 		tfDireccion = new JTextField();
+		tfDireccion.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfDireccion.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(tfDireccion);
 		tfDireccion.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nombre de la Ganaderia");
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel_1);
 		
 		tfNombreGanaderia = new JTextField();
+		tfNombreGanaderia.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfNombreGanaderia.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(tfNombreGanaderia);
 		tfNombreGanaderia.setColumns(10);
 		
 		JLabel lblDireccionDeLa = new JLabel("Direccion de la Ganaderia");
+		lblDireccionDeLa.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblDireccionDeLa.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblDireccionDeLa);
 		
 		tfDireccionGanaderia = new JTextField();
+		tfDireccionGanaderia.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfDireccionGanaderia.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(tfDireccionGanaderia);
 		tfDireccionGanaderia.setColumns(10);
 		
 		JLabel lblTelfonoDeLa = new JLabel("Tel\u00E9fono de la Ganader\u00EDa");
+		lblTelfonoDeLa.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblTelfonoDeLa.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblTelfonoDeLa);		
 		tfTelefono = new JFormattedTextField(mascara);
+		tfTelefono.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfTelefono.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(tfTelefono);
 		
 		btnRegistrarme = new JButton("REGISTRARME");
+		btnRegistrarme.setBackground(SystemColor.control);
+		btnRegistrarme.setFont(new Font("Dialog", Font.BOLD, 14));
 		btnRegistrarme.addActionListener(new ListenerRegistro());
 		
 		btnRegresar = new JButton("REGRESAR");
+		btnRegresar.setBackground(SystemColor.control);
+		btnRegresar.setFont(new Font("Dialog", Font.BOLD, 14));
 		btnRegresar.addActionListener(new ListenerRegistro());
 		contentPane.add(btnRegresar);
 		contentPane.add(btnRegistrarme);

@@ -16,6 +16,8 @@ import javax.swing.JFormattedTextField;
 import javax.swing.SwingConstants;
 import java.awt.Color;
 import javax.swing.JRadioButton;
+import java.awt.Font;
+import java.awt.SystemColor;
 /**
  * PerfilUsuario es una ventana de la GUI que permite ver la información que identifica a un usuario y su ganaderia. Además permite editar los datos y guardar la actualización en 
  * el modelo de persistencia
@@ -92,15 +94,18 @@ public class PerfilUsuario extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 508, 587);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(205, 133, 63));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout(11, 2, 5, 5));
 		
 		JLabel lblNombreCompleto = new JLabel("Nombre Completo");
+		lblNombreCompleto.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblNombreCompleto.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNombreCompleto);
 		
 		tfNombre = new JTextField();
+		tfNombre.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfNombre.setEditable(false);
 		tfNombre.setBackground(Color.WHITE);
 		tfNombre.setHorizontalAlignment(SwingConstants.CENTER);
@@ -108,10 +113,12 @@ public class PerfilUsuario extends JFrame {
 		tfNombre.setColumns(10);
 		
 		JLabel lblUsuario = new JLabel("Usuario");
+		lblUsuario.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblUsuario.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblUsuario);
 		
 		tfUsuario = new JTextField();
+		tfUsuario.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfUsuario.setBackground(Color.WHITE);
 		tfUsuario.setEditable(false);
 		tfUsuario.setHorizontalAlignment(SwingConstants.CENTER);
@@ -119,10 +126,12 @@ public class PerfilUsuario extends JFrame {
 		tfUsuario.setColumns(10);
 		
 		JLabel lblContrasea = new JLabel("Contrase\u00F1a");
+		lblContrasea.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblContrasea.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblContrasea);
 		
 		tfPassword = new JTextField();
+		tfPassword.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfPassword.setBackground(Color.WHITE);
 		tfPassword.setEditable(false);
 		tfPassword.setHorizontalAlignment(SwingConstants.CENTER);
@@ -130,21 +139,25 @@ public class PerfilUsuario extends JFrame {
 		tfPassword.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("M\u00F3vil");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel);
 		
 		MaskFormatter mascara = new MaskFormatter("########");
 		tfMovil = new JFormattedTextField(mascara);
+		tfMovil.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfMovil.setBackground(Color.WHITE);
 		tfMovil.setEditable(false);
 		tfMovil.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(tfMovil);
 		
 		JLabel lblDireccin = new JLabel("Direcci\u00F3n");
+		lblDireccin.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblDireccin.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblDireccin);
 		
 		tfDireccion = new JTextField();
+		tfDireccion.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfDireccion.setBackground(Color.WHITE);
 		tfDireccion.setEditable(false);
 		tfDireccion.setHorizontalAlignment(SwingConstants.CENTER);
@@ -152,10 +165,12 @@ public class PerfilUsuario extends JFrame {
 		tfDireccion.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nombre de la Ganaderia");
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel_1);
 		
 		tfNombreGanaderia = new JTextField();
+		tfNombreGanaderia.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfNombreGanaderia.setBackground(Color.WHITE);
 		tfNombreGanaderia.setEditable(false);
 		tfNombreGanaderia.setHorizontalAlignment(SwingConstants.CENTER);
@@ -163,10 +178,12 @@ public class PerfilUsuario extends JFrame {
 		tfNombreGanaderia.setColumns(10);
 		
 		JLabel lblDireccionDeLa = new JLabel("Direccion de la Ganaderia");
+		lblDireccionDeLa.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblDireccionDeLa.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblDireccionDeLa);
 		
 		tfDireccionGanaderia = new JTextField();
+		tfDireccionGanaderia.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfDireccionGanaderia.setBackground(Color.WHITE);
 		tfDireccionGanaderia.setEditable(false);
 		tfDireccionGanaderia.setHorizontalAlignment(SwingConstants.CENTER);
@@ -174,24 +191,34 @@ public class PerfilUsuario extends JFrame {
 		tfDireccionGanaderia.setColumns(10);
 		
 		JLabel lblTelfonoDeLa = new JLabel("Tel\u00E9fono de la Ganader\u00EDa");
+		lblTelfonoDeLa.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblTelfonoDeLa.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblTelfonoDeLa);		
 		tfTelefono = new JFormattedTextField(mascara);
+		tfTelefono.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfTelefono.setBackground(Color.WHITE);
 		tfTelefono.setEditable(false);
 		tfTelefono.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(tfTelefono);
 		
 		btnGuardarCambios = new JButton("GUARDAR CAMBIOS");
+		btnGuardarCambios.setFont(new Font("Dialog", Font.BOLD, 14));
+		btnGuardarCambios.setBackground(SystemColor.control);
 		btnGuardarCambios.addActionListener(new ListenerPerfilUsuario());
 		
 		rdbtnEditar = new JRadioButton("Editar");
+		rdbtnEditar.setBackground(new Color(205, 133, 63));
 		rdbtnEditar.addActionListener(new ListenerPerfilUsuario());
 		
 		lblNmeroDeAnimales = new JLabel("N\u00FAmero de animales");
+		lblNmeroDeAnimales.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNmeroDeAnimales.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		contentPane.add(lblNmeroDeAnimales);
 		
 		tfAnimales = new JTextField();
+		tfAnimales.setBackground(Color.WHITE);
+		tfAnimales.setEditable(false);
+		tfAnimales.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		tfAnimales.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(tfAnimales);
 		tfAnimales.setColumns(10);
@@ -201,6 +228,8 @@ public class PerfilUsuario extends JFrame {
 		contentPane.add(rdbtnEditar);
 		
 		btnRegresar = new JButton("REGRESAR");
+		btnRegresar.setFont(new Font("Dialog", Font.BOLD, 14));
+		btnRegresar.setBackground(SystemColor.control);
 		btnRegresar.addActionListener(new ListenerPerfilUsuario());
 		contentPane.add(btnRegresar);
 		contentPane.add(btnGuardarCambios);

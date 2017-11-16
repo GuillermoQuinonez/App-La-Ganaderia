@@ -15,6 +15,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.ParseException;
 import javax.swing.SwingConstants;
+import java.awt.SystemColor;
 /**
  * Esta clase contiene una ventana en donde se pide al usuario la información necesaria para la validación de la cuenta (usuario y contraseña) y poder acceder al menú del programa La Ganaderia. Además
  * contiene un botón que permite ingresar a la venana de registro de usurio 
@@ -77,13 +78,13 @@ public class Login extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblUsuario = new JLabel("USUARIO");
-		lblUsuario.setFont(new Font("Georgia", Font.BOLD, 16));
+		lblUsuario.setFont(new Font("Dialog", Font.BOLD, 16));
 		lblUsuario.setHorizontalAlignment(SwingConstants.CENTER);
 		lblUsuario.setBounds(63, 84, 140, 40);
 		contentPane.add(lblUsuario);
 		
 		tfUsuario = new JTextField();
-		tfUsuario.setFont(new Font("Georgia", Font.PLAIN, 14));
+		tfUsuario.setFont(new Font("Dialog", Font.PLAIN, 14));
 		tfUsuario.setHorizontalAlignment(SwingConstants.CENTER);
 		tfUsuario.setBounds(251, 89, 175, 30);
 		contentPane.add(tfUsuario);
@@ -91,26 +92,28 @@ public class Login extends JFrame {
 		
 		JLabel lblCotrasena = new JLabel("CONTRASE\u00D1A");
 		lblCotrasena.setHorizontalAlignment(SwingConstants.CENTER);
-		lblCotrasena.setFont(new Font("Georgia", Font.BOLD, 16));
+		lblCotrasena.setFont(new Font("Dialog", Font.BOLD, 16));
 		lblCotrasena.setBounds(63, 149, 140, 40);
 		contentPane.add(lblCotrasena);
 		
 		pwContrasena = new JPasswordField();
-		pwContrasena.setFont(new Font("Georgia", Font.PLAIN, 14));
+		pwContrasena.setFont(new Font("Dialog", Font.PLAIN, 14));
 		pwContrasena.setHorizontalAlignment(SwingConstants.CENTER);
 		pwContrasena.setBounds(251, 154, 175, 30);
 		contentPane.add(pwContrasena);
 		
 		btnIngresar = new JButton("INGRESAR");
+		btnIngresar.setBackground(SystemColor.control);
 		btnIngresar.setForeground(Color.BLACK);
-		btnIngresar.setFont(new Font("Georgia", Font.BOLD, 16));
+		btnIngresar.setFont(new Font("Dialog", Font.BOLD, 16));
 		btnIngresar.addActionListener(new ListenerLogin()); //Se implementa el Listener al botón
 		btnIngresar.setBounds(73, 232, 163, 47);
 		contentPane.add(btnIngresar);
 		
 		btnRegistrarse = new JButton("REGISTRARSE");
+		btnRegistrarse.setBackground(SystemColor.control);
 		btnRegistrarse.addActionListener(new ListenerLogin());
-		btnRegistrarse.setFont(new Font("Georgia", Font.BOLD, 16));
+		btnRegistrarse.setFont(new Font("Dialog", Font.BOLD, 16));
 		btnRegistrarse.setBounds(263, 233, 163, 47);
 		contentPane.add(btnRegistrarse);
 	} //Cierre del constructor

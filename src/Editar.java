@@ -27,6 +27,8 @@ import java.awt.event.ActionListener;
 import com.toedter.calendar.JDateChooser;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
+import javax.swing.border.CompoundBorder;
+import java.awt.SystemColor;
 /**
  * Esta clase contiene un frame con campos de texto y un ComboBox que muestran informacion del ganado seleccionado, además es editale y actualiza la iformación ingresada en la base de datos. 
  * @file Editar.java
@@ -95,13 +97,14 @@ public class Editar extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
-		contentPane.setBackground(UIManager.getColor("ScrollBar.foreground"));
+		contentPane.setBackground(new Color(205, 133, 63));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		 
 		JPanel panel = new JPanel();
-		panel.setBorder(new TitledBorder(null, "Datos Generales", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panel.setBackground(Color.WHITE);
+		panel.setBorder(new TitledBorder(new CompoundBorder(null, UIManager.getBorder("CheckBoxMenuItem.border")), "Datos Generales", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panel.setBounds(12, 77, 370, 317);
 		contentPane.add(panel);
 		panel.setLayout(new GridLayout(6, 2, 10, 10));
@@ -140,6 +143,7 @@ public class Editar extends JFrame {
 		panel.add(lblNewLabel_1);
 		
 		dcFecha = new JDateChooser();
+		dcFecha.getCalendarButton().setBackground(SystemColor.control);
 		panel.add(dcFecha);
 		
 		JLabel lblSexo = new JLabel("Sexo:");
@@ -148,6 +152,7 @@ public class Editar extends JFrame {
 		panel.add(lblSexo);
 		
 		cbSexo = new JComboBox<>();
+		cbSexo.setBackground(SystemColor.control);
 		cbSexo.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		cbSexo.addItem("Macho");
 		cbSexo.addItem("Hembra");
@@ -175,7 +180,8 @@ public class Editar extends JFrame {
 		panel.add(tfPeso);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Informaci\u00F3n de producci\u00F3n", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel_1.setBackground(Color.WHITE);
+		panel_1.setBorder(new TitledBorder(new CompoundBorder(null, UIManager.getBorder("CheckBoxMenuItem.border")), "Informaci\u00F3n de producci\u00F3n", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panel_1.setBounds(400, 77, 370, 317);
 		contentPane.add(panel_1);
 		panel_1.setLayout(new GridLayout(6, 2, 10, 10));
@@ -222,6 +228,7 @@ public class Editar extends JFrame {
 		panel_1.add(lblEstado);
 		
 		cbEstado = new JComboBox<>();
+		cbEstado.setBackground(SystemColor.control);
 		cbEstado.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		//Se añaden Items al ComboBox con las opciones predeterminadas
 		cbEstado.addItem("Otro");
@@ -251,7 +258,8 @@ public class Editar extends JFrame {
 		panel_1.add(tfGPeso);
 		
 		JPanel panel_3 = new JPanel();
-		panel_3.setBorder(new TitledBorder(null, "Historial", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panel_3.setBackground(Color.WHITE);
+		panel_3.setBorder(new TitledBorder(new CompoundBorder(null, UIManager.getBorder("CheckBoxMenuItem.border")), "Historial", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panel_3.setBounds(12, 407, 389, 133);
 		contentPane.add(panel_3);
 		panel_3.setLayout(new GridLayout(1, 1, 0, 0));
@@ -266,12 +274,14 @@ public class Editar extends JFrame {
 		panel_3.add(scroll);
 		
 		btnRegresar = new JButton("REGRESAR");
+		btnRegresar.setBackground(SystemColor.control);
 		btnRegresar.setFont(new Font("Dialog", Font.BOLD, 16));
 		btnRegresar.setBounds(608, 444, 138, 59);
 		btnRegresar.addActionListener(new ListenerEditar()); //Se implementa el Listener al botón 
 		contentPane.add(btnRegresar);
 		
 		btnGuardar = new JButton("GUARDAR");
+		btnGuardar.setBackground(SystemColor.control);
 		btnGuardar.setFont(new Font("Dialog", Font.BOLD, 16));
 		btnGuardar.setBounds(438, 444, 138, 59);
 		btnGuardar.addActionListener(new ListenerEditar());
