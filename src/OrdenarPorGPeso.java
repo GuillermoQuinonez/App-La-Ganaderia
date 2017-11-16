@@ -1,7 +1,7 @@
 import java.util.Comparator;
 /**
- * Esta clase implementa la intertfaz Comparator y sobreescribe el método compare para ordenar a los elementos Ganado de un ArrayList de mayor a menor por su ganancia de peso 
- * @file OrdenarPorGPeso.java
+ * Esta clase implementa la interfaz Comparator y sobrescribe el método compare para ordenar a los elementos Ganado de un ArrayList de mayor a menor por su ganancia de peso 
+ * OrdenarPorGPeso.java
  * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
  * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
  * @version 14.11.2017

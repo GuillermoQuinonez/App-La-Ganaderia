@@ -3,10 +3,10 @@ import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 /**
  * Usuario es la clase modelo de los obejos usuarios, es decir, contiene las caracteristicas que se requieren conocer de los clientes del programa y sus ganaderias. 
- * @file Usuario.java
+ * Usuario.java
  * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
  * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
- * @date 14.11.2017
+ * @version 14.11.2017
  */
 @Entity
 public class Usuario {

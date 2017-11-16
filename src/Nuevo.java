@@ -28,10 +28,10 @@ import javax.swing.SpinnerNumberModel;
 import java.awt.SystemColor;
 /**
  * Nuevo es un ventana de la GUI que permite llenar los datos requeridos para crear un registro de la clase Ganado
- * @file Nuevo.java
+ * Nuevo.java
  * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
  * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
- * @date 15.11.2017
+ * @version 15.11.2017
  */
 public class Nuevo extends JFrame {
 	/**

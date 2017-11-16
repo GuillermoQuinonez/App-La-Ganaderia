@@ -1,0 +1,1 @@
+Antes de inciar el programa asegurese de abrir MongoDB

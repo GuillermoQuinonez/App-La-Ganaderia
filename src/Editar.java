@@ -2,7 +2,6 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.GridLayout;
-import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -30,11 +29,11 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.border.CompoundBorder;
 import java.awt.SystemColor;
 /**
- * Editar es una ventana de la GUI que muesta la información de un bovino seleccionado y permite modificar la información de los campos. Emplea método que permiten persistir la actualización
- * @file Editar.java
+ * Editar es una ventana de la GUI que muestra la información de un bovino seleccionado y permite modificar la información de los campos. Emplea método que permiten persistir la actualización
+ * Editar.java
  * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
  * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
- * @date 15.11.2017
+ * @version 15.11.2017
  */
 public class Editar extends JFrame {
 	/**
@@ -65,7 +64,7 @@ public class Editar extends JFrame {
 	private JSpinner tfGPeso;
 	private Ganado ganadoActual; 
 	/**
-	 * Launch the application.
+	 * @param args
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -81,10 +80,11 @@ public class Editar extends JFrame {
 		});
 	}//Cierre del método
 
+	
 	/**
 	 * Construtor de la clase, despliega el frame y todos los componentes en él: paneles, campos de texto, labels, áreas de texto, botones.
-	 * @throws SQLException 
-	 * @throws ParseException 
+	 * @param codigo
+	 * @throws ParseException
 	 */
 	public Editar(String codigo) throws ParseException{
 		controlador=new ControlGanaderia();
@@ -337,7 +337,7 @@ public class Editar extends JFrame {
 
 }//Fin del constructor
 	/**
-	 * ListenerEditar es una clase interna  que se encarga de escuchar los eventos de los botones para llamar a los método que permiten cambiar los datos en la base de datos con
+	 * ListenerEditar es una clase interna  que se encarga de escuchar los eventos de los botones para llamar a los métodos que permiten cambiar los datos en la base de datos con
 	 * los datos ingresados y regresar al menú principal. También registra el estado del bovino seleccionado y muestra la ganancia de peso en el historial cuando un animal pertenece a
 	 * Engorde y la cantidad de leche cuando el animal está en Producción Lechera. 
 	 */

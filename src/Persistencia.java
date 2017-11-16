@@ -7,10 +7,10 @@ import com.mongodb.MongoClient;
 /**
  * Esta clase establece la conexión con la base de datos MongoDB y contiene los método que permiten guardar y eliminar documentos. Así como obtener los datos para ser
  * usados por los método del programa
- * @file Persistencia.java
- * @author José Guillermo Quiñónez Castillo <qui17775@uvg.edu.gt>
- * @author Carlo Humberto Chew <che17507@uvg.edu.gt>
- * @date 15.11.2017
+ * Persistencia.java
+ * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
+ * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
+ * @version 15.11.2017
  */
 public class Persistencia {
 	private Datastore ds; //NoSQL Datastore
@@ -76,7 +76,7 @@ public class Persistencia {
 	
 	/**
 	 * Este método permite consultaro los registros de la clase de Ganado que se encuentra en la base de datos para ser manipulados por el programa
-	 * @return ganado ArrayList<Ganado> que contiene los objetos Ganado que se encuentran guardados en la base de datos
+	 * @return ganado ArrayListGanado que contiene los objetos Ganado que se encuentran guardados en la base de datos
 	 */
 	public ArrayList<Ganado> ObtenerRegistros(){
 		ArrayList<Ganado> registros = new ArrayList<Ganado>();
@@ -90,7 +90,7 @@ public class Persistencia {
 	
 	/**
 	 * Este método permite consultaro los registros de la clase de Usuario que se encuentra en la base de datos
-	 * @return usuarios ArrayList<Usuario> que contiene los objetos Usuario que se encuentran guardados en la base de datos para ser manipulados por el programa
+	 * @return usuarios ArrayList Usuario que contiene los objetos Usuario que se encuentran guardados en la base de datos para ser manipulados por el programa
 	 */
 	public ArrayList<Usuario> ObtenerUsuario(){
 		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();

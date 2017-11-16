@@ -19,10 +19,10 @@ import java.awt.SystemColor;
 /**
  * Esta clase contiene una ventana en donde se pide al usuario la información necesaria para la validación de la cuenta (usuario y contraseña) y poder acceder al menú del programa La Ganaderia. Además
  * contiene un botón que permite ingresar a la venana de registro de usurio 
- * @file Login.java
+ * Login.java
  * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
  * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
- * @date 14.11.2017
+ * @version 14.11.2017
  */
 public class Login extends JFrame {
 	/**
@@ -119,7 +119,7 @@ public class Login extends JFrame {
 	} //Cierre del constructor
 	
 	/**
-	 * Esta clase interna escucha el evento de hacer click sobre el botón ingresar y registro. Envía el usuario y contraseña al método de validación si el se hace click en ingresar y abre el menú si coinciden, en caso contrario muestra un mensaje
+	 * Esta clase interna que escucha el evento de hacer click sobre el botón ingresar y registro. Envía el usuario y contraseña al método de validación si el se hace click en ingresar y abre el menú si coinciden, en caso contrario muestra un mensaje
 	 * de error. Permite abrir la ventana de registro al dar click en el bontón registro
 	 */
 	public class ListenerLogin implements ActionListener{

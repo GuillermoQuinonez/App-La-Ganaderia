@@ -20,10 +20,10 @@ import java.awt.Font;
 import java.awt.SystemColor;
 /**
  * Registro es una ventana de la GUI que permite ingresar la información requerida para un usuario y guardarla en los registros para crear un nuevo usuario
- * @file Registros.java
+ * Registros.java
  * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
  * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
- * @date 14.11.2017
+ * @version 14.11.2017
  */
 public class Registro extends JFrame {
 	/**

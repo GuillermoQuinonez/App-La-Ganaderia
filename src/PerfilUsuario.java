@@ -21,10 +21,10 @@ import java.awt.SystemColor;
 /**
  * PerfilUsuario es una ventana de la GUI que permite ver la información que identifica a un usuario y su ganaderia. Además permite editar los datos y guardar la actualización en 
  * el modelo de persistencia
- * @file Registros.java
+ * Registros.java
  * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
  * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
- * @date 14.11.2017
+ * @version 14.11.2017
  */
 public class PerfilUsuario extends JFrame {
 	/**

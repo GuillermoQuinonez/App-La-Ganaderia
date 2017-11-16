@@ -28,10 +28,10 @@ import java.awt.SystemColor;
  * Principal es una ventana de la GUI que muestra la información de todos los bovinos regristrados para un usuario. Además contiene los botones que permiten abrir las otras ventanas
  * para ver crear, ver o editar la información; otro botón permite regresar al Login y así cerrar la sesión y muestra la información del usuario. Esta clase además cuenta con una buscador
  * que muestra un registro buscado por su número. Además permite ordenar la información buscada por diversos parámetros y despliega mediante un botón una gráfica del procentaje de bovinos en cada uno de los estados
- * @file Principal.java
+ * Principal.java
  * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
  * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
- * @date 15.11.2017
+ * @version 15.11.2017
  */
 public class Principal extends JFrame {
 	/**

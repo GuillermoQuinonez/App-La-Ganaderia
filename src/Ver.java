@@ -22,11 +22,11 @@ import javax.swing.JTextArea;
 import javax.swing.border.CompoundBorder;
 import java.awt.SystemColor;
 /**
- * Ver es una ventana de la GUI que permite vizualizar la información de un bovino registrado, pero no deja editarlos. 
- * @file Ver.java
+ * Ver es una ventana de la GUI que permite visualizar la información de un bovino registrado, pero no deja editarlos. 
+ * Ver.java
  * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
  * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
- * @date 15.11.2017
+ * @version 15.11.2017
  */
 public class Ver extends JFrame {
 	/**

@@ -6,9 +6,9 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.general.DefaultPieDataset;
 /**
- * Esta clase cotiene una gráfica de Pastel que porporciona información gráfica de la proporción de animales en la ganadería que se encuentran en los diversos estados. Esto 
+ * Esta clase contiene una gráfica de Pastel que proporciona información gráfica de la proporción de animales en la ganadería que se encuentran en los diversos estados. Esto 
  * le permite ver al usuario la cantidad de bovinos que le generan o generarán ganancia y con ello visualizar si la ganadería está trabajando de forma eficiente
- * @file GraficaDeEstados.java
+ * GraficaDeEstados.java
  * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
  * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
  * @version 14.11.2017

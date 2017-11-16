@@ -5,10 +5,10 @@ import javax.swing.JFrame;
  * ControlGanaderia contiene los método que permiten cumplir con los requisitos funcionales del programa manipulando arreglos que contienen el registro de animales en la gandería
  * y usuarios que emplean el programa. Permite guardar, obtener, editar y eliminar los registros de los bovinos de la gandería. También crear, editar y autenticar a los usuarios y sus contraseñas
  * para lograr ingresar al programa. 
- * @file ControlGanaderia.java
+ * ControlGanaderia.java
  * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
  * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
- * @date 14.11.2017
+ * @version 14.11.2017
  */
 public class ControlGanaderia {
 	private ArrayList<Ganado> ganado; 
@@ -205,6 +205,11 @@ public class ControlGanaderia {
 		return ganado;
 	}//Cierre del método
 	
+	/**
+	 * Este método recibe un id y busca en el arreglo de los registros que objeto que lo tiene, luego lo envía al método
+	 * que elimina el registro dela base de datos
+	 * @param id String que indica el id del regitros en la base de datos
+	 */
 	public void EliminarGanado(String id) {
 		Registros(); 
 		for(Ganado g: ganado) {
