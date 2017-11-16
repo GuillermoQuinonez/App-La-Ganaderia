@@ -79,7 +79,7 @@ public class ControlGanaderia {
 	}//Cierre del método
 	
 	/**
-	 * Este método establece la conexión con el modelo de persistencia de los usuardios
+	 * Este método establece la conexión con el modelo de persistencia de los usuarios
 	 */
 	public void ConectarUsuarios() {
 		persistencia.ConexionUsuarios();

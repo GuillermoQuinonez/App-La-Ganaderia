@@ -25,11 +25,13 @@ import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 import java.awt.SystemColor;
 /**
- * Esta clase contiene un menú con botones para efectuar las diferentes acciones que el programa realiza y además contiene una tabla con la información de cada ganado creado
+ * Principal es una ventana de la GUI que muestra la información de todos los bovinos regristrados para un usuario. Además contiene los botones que permiten abrir las otras ventanas
+ * para ver crear, ver o editar la información; otro botón permite regresar al Login y así cerrar la sesión y muestra la información del usuario. Esta clase además cuenta con una buscador
+ * que muestra un registro buscado por su número. Además permite ordenar la información buscada por diversos parámetros y despliega mediante un botón una gráfica del procentaje de bovinos en cada uno de los estados
  * @file Principal.java
- * @author José Guillermo Quiñónez Castillo <qui17775@uvg.edu.gt>
- * @author Carlo Humberto Chew <che17507@uvg.edu.gt>
- * @version 19.10.2017/A
+ * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
+ * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
+ * @date 15.11.2017
  */
 public class Principal extends JFrame {
 	/**
@@ -232,11 +234,8 @@ public class Principal extends JFrame {
 	}//Cierre del constructor 
 	
 	/**
-	 * Esta clase interna es la que se encarga de esuchar los eventos relacionados a los botones del menú y despliega los diferentes ventanas que requiere el programa 
-	 * @file Principal.java
-	 * @author José Guillermo Quiñónez Castillo <qui17775@uvg.edu.gt>
-	 * @author Carlo Humberto Chew <che17507@uvg.edu.gt>
-	 * @version 28.09.2017/A
+	 * Listener principal es una clase interna que implementa ActionListener y mediante el método actionPerformed detecta el click de los botones en Principal. Abre las ventanas correspondientes y/o llama a los diversos
+	 * método del controlador que permiten efectuar las acciones que se requieren en cada botón. 
 	 */
 	public class ListenerPrincipal implements ActionListener{
 		@Override
@@ -335,6 +334,6 @@ public class Principal extends JFrame {
 			
 		}//Cierre del método
 		
-	}  //Cierre de la clase interna MyListener
+	}  //Cierre de la clase interna
 	
-}//Cierre de la clase Principal
+}//Fin de la clase

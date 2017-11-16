@@ -30,11 +30,11 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.border.CompoundBorder;
 import java.awt.SystemColor;
 /**
- * Esta clase contiene un frame con campos de texto y un ComboBox que muestran informacion del ganado seleccionado, además es editale y actualiza la iformación ingresada en la base de datos. 
+ * Editar es una ventana de la GUI que muesta la información de un bovino seleccionado y permite modificar la información de los campos. Emplea método que permiten persistir la actualización
  * @file Editar.java
- * @author José Guillermo Quiñónez Castillo <qui17775@uvg.edu.gt>
- * @author Carlo Humberto Chew <che17507@uvg.edu.gt>
- * @version 28.09.2017/A
+ * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
+ * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
+ * @date 15.11.2017
  */
 public class Editar extends JFrame {
 	/**
@@ -64,8 +64,6 @@ public class Editar extends JFrame {
 	private JSpinner tfPLechera;
 	private JSpinner tfGPeso;
 	private Ganado ganadoActual; 
-	
-
 	/**
 	 * Launch the application.
 	 */
@@ -338,14 +336,10 @@ public class Editar extends JFrame {
 	}
 
 }//Fin del constructor
-	
 	/**
-	 * Esta clase interna es la que se encarga de escuchar los eventos de los botones para llamar a los método que permiten crear cambiar los datos en la base de datos con
-	 * los datos ingresados y regresar al menú principal, también permiten validad si los campos están llenos para evitar errores en tiempo de ejecución
-	 * @file Nuevo.java
-	 * @author José Guillermo Quiñónez Castillo <qui17775@uvg.edu.gt>
-	 * @author Carlo Humberto Chew <che17507@uvg.edu.gt>
-	 * @version 28.09.2017/A
+	 * ListenerEditar es una clase interna  que se encarga de escuchar los eventos de los botones para llamar a los método que permiten cambiar los datos en la base de datos con
+	 * los datos ingresados y regresar al menú principal. También registra el estado del bovino seleccionado y muestra la ganancia de peso en el historial cuando un animal pertenece a
+	 * Engorde y la cantidad de leche cuando el animal está en Producción Lechera. 
 	 */
 	public class ListenerEditar implements ActionListener{
 		@Override
@@ -389,8 +383,7 @@ public class Editar extends JFrame {
 							String MensajeAdvertencia = "El animal ha perdido " + CambioPeso  + " libras desde la última pesada"; 
 							JOptionPane.showMessageDialog(null, MensajeAdvertencia, "¡Advertencia!", 2);
 							txtHistorial.append("\n"+"Pesada "+ new SimpleDateFormat("dd/MM/yyyy").format(FechaActual)+": "+ MensajeAdvertencia);
-						}
-						
+						}	
 					}
 					else {
 						tfGPeso.setValue(0);
@@ -410,7 +403,6 @@ public class Editar extends JFrame {
 				 * */
 				controlador.regresar(Editar.this);
 			}
-			
 			if(arg0.getSource() == cbEstado) {
 				JFormattedTextField ProduccionLechera = ((JSpinner.DefaultEditor) tfPLechera.getEditor()).getTextField();
 				if(cbEstado.getSelectedIndex() == 1) {
@@ -432,8 +424,8 @@ public class Editar extends JFrame {
 					tfGPeso.setValue(0);	
 				}
 			}
-		}
+		}//Cierre del método
 		
-	}
+	}//Fin de la clase interna 
 	
-}//Cierre de la clase Editar
+}//Fin de la clase

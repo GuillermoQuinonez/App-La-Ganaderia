@@ -22,11 +22,11 @@ import javax.swing.JTextArea;
 import javax.swing.border.CompoundBorder;
 import java.awt.SystemColor;
 /**
- * Esta clase contiene un frame con campos de texto que muestran información proveniente de la base de datos de cada ganado, sin poder editarlos. 
+ * Ver es una ventana de la GUI que permite vizualizar la información de un bovino registrado, pero no deja editarlos. 
  * @file Ver.java
- * @author José Guillermo Quiñónez Castillo <qui17775@uvg.edu.gt>
- * @author Carlo Humberto Chew <che17507@uvg.edu.gt>
- * @version 28.09.2017/A
+ * @author José Guillermo Quiñónez Castillo (qui17775@uvg.edu.gt)
+ * @author Carlo Humberto Chew (che17507@uvg.edu.gt)
+ * @date 15.11.2017
  */
 public class Ver extends JFrame {
 	/**
@@ -309,11 +309,7 @@ public class Ver extends JFrame {
 		} //Cierre del constructor 
 }
 	/**
-	 * Esta clase interna es la que se encarga de escuchar el evento del botón regresar
-	 * @file Ver.java
-	 * @author José Guillermo Quiñónez Castillo <qui17775@uvg.edu.gt>
-	 * @author Carlo Humberto Chew <che17507@uvg.edu.gt>
-	 * @version 28.09.2017/A
+	 * MyListenerVer es una clase interna que implementa ActionListener y mediante el método actionPerformed detecta el click del botón regresar para abrir el principal
 	 */
 	private class MyListenerVer implements ActionListener{
 		@Override
@@ -323,6 +319,7 @@ public class Ver extends JFrame {
 		public void actionPerformed(ActionEvent arg0) {
 			controlador.regresar(Ver.this); 
 		}//Cierre del método 
-	}//Cierre de la clase interna MyListener
+		
+	}//Cierre de la clase interna 
 	
-}//Cierre de la clase Ver
+}//Cierre de la clase 

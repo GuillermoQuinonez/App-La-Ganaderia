@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+ import java.util.ArrayList;
 import java.util.List;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
@@ -28,14 +28,14 @@ public class Persistencia {
 	 */
 	public static String getNombreDB() {
 		return nombreDB;
-	}
+	}//Cierre del método
 
 	/**
 	 * @param nombreDB the nombreDB to set
 	 */
 	public static void setNombreDB(String nombreDB) {
 		Persistencia.nombreDB = nombreDB;
-	}
+	}//Cierre del método
 
 	/**
 	 * Este método establece la conexión con la base de datos especifica del usuario y crea el objeto ds que permitirá la interaccion entre Java y MongoDB
